@@ -8,12 +8,12 @@
 
 
 body{
-    background-color: #5cb3db ;
+    background-color: white;
     overflow-x: hidden;
 }
 
 nav {
-    background-color: #75e5ab;
+    background-color: #5cb3db;
     padding: 1rem;
     width: 100%;
     display: flex;
