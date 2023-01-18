@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #5cb3db ;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #75e5ab;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    border-bottom: solid black 1px;
+  }
