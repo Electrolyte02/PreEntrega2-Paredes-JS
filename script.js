@@ -7,6 +7,9 @@ class Producto{
     this.categoria=categoria;
     this.cantidad=cantidad;
     }
+    sumarIva(){
+        this.precio=(this.precio*1.21);
+    }
 }
 
 const Productos= [];
@@ -19,7 +22,7 @@ let preProducto="";
 let catProducto="";
 let canProducto="";
 
-do{
+function cargarProducto(){
     nomProducto=prompt("Ingrese el nombre del producto a cargar");
     marProducto=prompt("Ingrese la marca del producto a cargar");
     stoProducto=prompt("Ingrese el stock del producto a cargar");
@@ -27,14 +30,19 @@ do{
     catProducto=prompt("Ingrese la categoria del producto a cargar");
     canProducto=prompt("Ingrese la cantidad(unidad,litros o gramos) del producto a cargar");
     Productos.push(new Producto(nomProducto,marProducto,stoProducto,preProducto,catProducto,canProducto));
+}
+
+
+do{
+    cargarProducto();
     operacion=prompt("Ingrese 1 si desea continuar cargando productos u otra cosa para salir");
     operacion=parseInt(operacion);
 }
 while (operacion==1)
 
-const ProductosEnStock = Productos.filter((element)=>element.stock>0)
+const ProductosEnStock = Productos.filter((element)=>element.stock>0);
 
-Largo = Productos.length
+Largo = Productos.length;
 
 function recorrerProductos(array,fn){
   for(var i=0;i<Largo;i++){
@@ -42,6 +50,6 @@ function recorrerProductos(array,fn){
 }
 }
 
-console.log("Los productos que estan actualmente en stock son:")
-recorrerProductos(ProductosEnStock,console.log)
+console.log("Los productos que estan actualmente en stock son:");
+recorrerProductos(ProductosEnStock,console.log);
 
